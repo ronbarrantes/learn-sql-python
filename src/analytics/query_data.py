@@ -1,18 +1,12 @@
+from pathlib import Path
+
 from google.cloud import bigquery
+
+sql_text = Path("queries/first_query.sql").read_text()
 
 client = bigquery.Client()
 
-query = """
-    SELECT 
-        rank, 
-        dma_name AS Name, 
-        term, 
-        refresh_date AS Day
-    FROM 
-        `bigquery-public-data.google_trends.top_rising_terms`
-    ORDER BY Day Desc
-    LIMIT 50
-  """
+query = sql_text 
 
 def the_query():
     rows = client.query_and_wait(query)

@@ -1,3 +1,3 @@
-import src.find_trends.query_data
+import src.analytics.query_data as qd
 
-src.find_trends.query_data.the_query()
+qd.the_query()
