@@ -10,20 +10,47 @@ random.seed(7)
 first_names = [
     "Ava", "Noah", "Liam", "Emma", "Olivia", "Mia", "Ethan", "Sofia", "Lucas", "Amelia",
     "Mason", "Isabella", "Logan", "Harper", "James", "Evelyn", "Elijah", "Abigail", "Henry", "Ella",
+    "Benjamin", "Charlotte", "Daniel", "Scarlett", "Jack", "Luna", "Alexander", "Grace", "Sebastian",
+    "Chloe", "David", "Penelope", "Joseph", "Riley", "Samuel", "Zoey", "Carter", "Nora", "Wyatt",
+    "Hannah",
 ]
 last_names = [
     "Smith", "Johnson", "Brown", "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin",
     "Thompson", "Garcia", "Martinez", "Robinson", "Clark", "Rodriguez", "Lewis", "Lee", "Walker", "Hall",
+    "Allen", "Young", "King", "Wright", "Scott", "Green", "Baker", "Adams", "Nelson", "Hill",
+    "Campbell", "Mitchell", "Carter", "Roberts", "Gomez", "Phillips", "Evans", "Turner", "Torres",
+    "Parker",
 ]
 
-categories = ["Books", "Electronics", "Home", "Outdoors", "Clothing"]
-product_names = [
-    "Notebook", "Headphones", "Coffee Mug", "Backpack", "Desk Lamp", "Water Bottle", "Bluetooth Speaker",
-    "Sweater", "Tent", "Cookbook", "Monitor", "Keyboard", "Mouse", "Jacket", "Flashlight",
-    "Sunglasses", "Running Shoes", "Yoga Mat", "Planner", "Camera Bag",
-]
+category_products = {
+    "Books": [
+        "Notebook", "Cookbook", "Planner", "Novel", "Travel Guide", "Journal", "Sketchbook",
+        "Recipe Cards", "Study Guide",
+    ],
+    "Electronics": [
+        "Headphones", "Bluetooth Speaker", "Monitor", "Keyboard", "Mouse", "Camera Bag",
+        "Portable Charger", "Smartwatch", "Webcam", "Wireless Earbuds", "USB Hub", "Laptop Stand",
+    ],
+    "Home": [
+        "Coffee Mug", "Desk Lamp", "Water Bottle", "Yoga Mat", "Throw Blanket", "Candle",
+        "Picture Frame", "Kitchen Towels", "Storage Bin", "Cutting Board",
+    ],
+    "Outdoors": [
+        "Backpack", "Tent", "Flashlight", "Sunglasses", "Camping Stove", "Hiking Poles",
+        "Sleeping Bag", "Water Filter", "Trail Map",
+    ],
+    "Clothing": [
+        "Sweater", "Jacket", "Running Shoes", "Raincoat", "Beanie", "Hoodie",
+        "Athletic Socks", "Gloves",
+    ],
+}
+categories = list(category_products.keys())
 
-cities = ["New York", "Chicago", "Seattle", "Austin", "Denver", "Boston", "Phoenix", "Atlanta"]
+cities = [
+    "New York", "Chicago", "Seattle", "Austin", "Denver", "Boston", "Phoenix", "Atlanta",
+    "San Francisco", "Los Angeles", "Portland", "Dallas", "Houston", "Miami", "Minneapolis",
+    "Philadelphia", "San Diego", "Charlotte", "Nashville", "Raleigh",
+]
 
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 if DB_PATH.exists():
@@ -70,7 +97,7 @@ cur.executescript(
 # Customers
 customers = []
 start_date = date(2023, 1, 1)
-for i in range(1, 51):
+for i in range(1, 121):
     name = f"{random.choice(first_names)} {random.choice(last_names)}"
     city = random.choice(cities)
     joined = start_date + timedelta(days=random.randint(0, 600))
@@ -80,9 +107,9 @@ cur.executemany("INSERT INTO customers VALUES (?, ?, ?, ?)", customers)
 
 # Products
 products = []
-for i in range(1, 81):
-    name = f"{random.choice(product_names)} {i}"
+for i in range(1, 161):
     category = random.choice(categories)
+    name = f"{random.choice(category_products[category])} {i}"
     price = round(random.uniform(8, 220), 2)
     products.append((i, name, category, price))
 
@@ -92,7 +119,7 @@ cur.executemany("INSERT INTO products VALUES (?, ?, ?, ?)", products)
 statuses = ["pending", "shipped", "delivered", "cancelled"]
 orders = []
 order_start = date(2023, 6, 1)
-for i in range(1, 201):
+for i in range(1, 401):
     customer_id = random.randint(1, 50)
     order_date = order_start + timedelta(days=random.randint(0, 300))
     status = random.choices(statuses, weights=[10, 30, 50, 10], k=1)[0]
@@ -103,9 +130,9 @@ cur.executemany("INSERT INTO orders VALUES (?, ?, ?, ?)", orders)
 # Order items
 order_items = []
 item_id = 1
-for order_id in range(1, 201):
+for order_id in range(1, 401):
     for _ in range(random.randint(1, 5)):
-        product_id = random.randint(1, 80)
+        product_id = random.randint(1, 160)
         quantity = random.randint(1, 4)
         order_items.append((item_id, order_id, product_id, quantity))
         item_id += 1
