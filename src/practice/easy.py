@@ -16,7 +16,7 @@ def challege1():
     print("The query data:")
     for row in rows:
         print(
-            "{} | {} from {} since {}".format(
+            "{} | {}, from {}, joined on {}".format(
                 row["id"], row["name"], row["city"], row["joined_date"]
             )
         )
