@@ -3,7 +3,7 @@
 Use `data/practice.db`. Tables: `customers`, `products`, `orders`, `order_items`.
 
 ## Easy
-1) List the first 10 customers (id, name, city, joined_date), ordered by `joined_date` (oldest first).
+1) ~~List the first 10 customers (id, name, city, joined_date), ordered by `joined_date` (oldest first).~~
    - Focus: sorting and limiting results; core to almost every report.
 2) Show all products in the `Electronics` category with price > 100, ordered by price descending.
    - Focus: filtering with `WHERE` and basic sorting; essential for precise slices of data.
