@@ -8,7 +8,7 @@ Use `data/practice.db`. Tables: `customers`, `products`, `orders`, `order_items`
    - ~~Focus: sorting and limiting results; core to almost every report.~~
 2. ~~Show all products in the `Electronics` category with price > 100, ordered by price descending.~~
    - ~~Focus: filtering with `WHERE` and basic sorting; essential for precise slices of data.~~
-3. Count how many orders are in each `status`. Show `status` and the count.
+3. ~~Count how many orders are in each `status`. Show `status` and the count.~~
    - Focus: `GROUP BY` for basic aggregation; foundational for summaries.
 4. Find the 5 most recent orders (id, customer_id, order_date, status).
    - Focus: date sorting and limiting; common in recency-based analysis.
