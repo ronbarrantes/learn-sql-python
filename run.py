@@ -1,7 +1,11 @@
-import src.practice.easy as easy
+import src.practice.practice as practice
 
-# easy.challege1()
-# print("\n-------\n")
-# easy.challege2()
-# print("\n-------\n")
-easy.challege3()
+practice.challege1()
+print("\n-------\n")
+practice.challege2()
+print("\n-------\n")
+practice.challege3()
+print("\n-------\n")
+practice.challege4()
+print("\n-------\n")
+practice.challege5()

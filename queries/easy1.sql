@@ -3,6 +3,6 @@
 
 SELECT id, name, city, joined_date  
 FROM customers
-ORDER BY joined_date Desc
+ORDER BY joined_date Asc
 LIMIT 10 
   
