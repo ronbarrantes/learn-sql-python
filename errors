@@ -1,0 +1,44 @@
+Mar 15 09:16:36 archlinux kernel: DMAR-IR: [Firmware Bug]: ioapic 2 has no mapping iommu, interrupt remapping will be disabled
+Mar 15 09:16:49 archmac bluetoothd[592]: Failed to set default system config for hci0
+Mar 15 09:16:50 archmac wpa_supplicant[611]: bgscan simple: Failed to enable signal strength monitoring
+Mar 15 09:16:51 archmac systemd[1]: Failed to start PostgreSQL database server.
+Mar 15 12:13:54 archmac kernel: ERROR @wl_notify_scan_status : 
+Mar 15 12:13:57 archmac dbus-broker-launch[735]: Ignoring duplicate name 'org.freedesktop.FileManager1' in service file '/usr/share/dbus-1/services/org.xfce.Thunar.FileManager1.service'
+Mar 15 12:13:58 archmac wpa_supplicant[611]: bgscan simple: Failed to enable signal strength monitoring
+Mar 15 12:27:34 archmac kernel: ERROR @wl_notify_scan_status : 
+Mar 15 12:27:36 archmac wpa_supplicant[611]: bgscan simple: Failed to enable signal strength monitoring
+Mar 15 14:49:03 archmac kernel: ERROR @wl_notify_scan_status : 
+Mar 15 14:49:05 archmac wpa_supplicant[611]: bgscan simple: Failed to enable signal strength monitoring
+Mar 15 15:03:00 archmac kernel: ERROR @wl_notify_scan_status : 
+Mar 15 15:03:02 archmac wpa_supplicant[611]: bgscan simple: Failed to enable signal strength monitoring
+Mar 15 15:03:12 archmac hyprlock[7761]: pam_faillock(hyprlock:auth): Error sending audit message: Operation not permitted
+Mar 15 15:03:12 archmac hyprlock[7761]: pam_faillock(hyprlock:auth): Error sending audit message: Operation not permitted
+Mar 15 19:55:27 archmac kernel: ERROR @wl_notify_scan_status : 
+Mar 15 19:55:28 archmac systemd-coredump[8050]: Process 7973 (hyprlock) of user 1000 dumped core.
+                                                
+                                                Stack trace of thread 8037:
+                                                #0  0x000056548ffb1fdd n/a (/usr/bin/hyprlock + 0x78fdd)
+                                                #1  0x00007f84a80e55a4 n/a (libstdc++.so.6 + 0xe55a4)
+                                                #2  0x00007f84a7d8797a n/a (libc.so.6 + 0x9697a)
+                                                #3  0x00007f84a7e0b2bc n/a (libc.so.6 + 0x11a2bc)
+                                                
+                                                Stack trace of thread 7973:
+                                                #0  0x00007f84a7d8ff32 n/a (libc.so.6 + 0x9ef32)
+                                                #1  0x00007f84a7d8439c n/a (libc.so.6 + 0x9339c)
+                                                #2  0x00007f84a7d8468c n/a (libc.so.6 + 0x9368c)
+                                                #3  0x00007f84a7d897b5 n/a (libc.so.6 + 0x987b5)
+                                                #4  0x00007f84a80e5624 _ZNSt6thread4joinEv (libstdc++.so.6 + 0xe5624)
+                                                #5  0x000056548ffa0f43 n/a (/usr/bin/hyprlock + 0x67f43)
+                                                #6  0x000056548ff907d5 n/a (/usr/bin/hyprlock + 0x577d5)
+                                                #7  0x00007f84a7d31a61 n/a (libc.so.6 + 0x40a61)
+                                                #8  0x00007f84a7d31b3e exit (libc.so.6 + 0x40b3e)
+                                                #9  0x000056548ffa2484 n/a (/usr/bin/hyprlock + 0x69484)
+                                                #10 0x000056548ff5d82f n/a (/usr/bin/hyprlock + 0x2482f)
+                                                #11 0x00007f84a7d186c1 n/a (libc.so.6 + 0x276c1)
+                                                #12 0x00007f84a7d187f9 __libc_start_main (libc.so.6 + 0x277f9)
+                                                #13 0x000056548ff60615 n/a (/usr/bin/hyprlock + 0x27615)
+                                                ELF object binary architecture: AMD x86-64
+Mar 15 19:55:30 archmac hyprlock[7761]: pam_faillock(hyprlock:auth): Error sending audit message: Operation not permitted
+Mar 15 19:55:31 archmac wpa_supplicant[611]: bgscan simple: Failed to enable signal strength monitoring
+Mar 15 20:01:02 archmac kernel: ERROR @wl_notify_scan_status : 
+Mar 15 20:01:07 archmac wpa_supplicant[611]: bgscan simple: Failed to enable signal strength monitoring

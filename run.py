@@ -1,3 +1,3 @@
-import src.analytics.query_data as qd
+import src.practice.easy as easy
 
-qd.the_query()
+easy.challege1()
