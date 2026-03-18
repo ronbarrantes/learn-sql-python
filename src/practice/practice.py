@@ -71,8 +71,4 @@ def challege5():
     rows = cursor.fetchall()
     print("CHALLEGE 5:")
     for row in rows:
-        print(
-            "{} | {} {} {}".format(
-                row["id"], row["customer_id"], row["order_date"], row["status"]
-            )
-        )
+        print("{} | {} {}".format(row["id"], row["name"], row["Count"]))
