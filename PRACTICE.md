@@ -15,8 +15,8 @@ Use `data/practice.db`. Tables: `customers`, `products`, `orders`, `order_items`
 
 ## Medium
 
-5. For each customer, show total number of orders. Include customers with zero orders. Sort by total orders descending.
-   - Focus: `LEFT JOIN` + aggregation; critical for “include missing” cases.
+5. ~~For each customer, show total number of orders. Include customers with zero orders. Sort by total orders descending.~~
+   - ~~Focus: `LEFT JOIN` + aggregation; critical for “include missing” cases.~~
 6. For each order, compute the total number of items (sum of `quantity`). Return order id and total items.
    - Focus: joining detail rows and aggregating; common in order/invoice logic.
 7. For each product category, compute average price and number of products. Show only categories with at least 10 products.

@@ -7,6 +7,7 @@ ch2 = Path("queries/easy2.sql").read_text()
 ch3 = Path("queries/easy3.sql").read_text()
 ch4 = Path("queries/easy4.sql").read_text()
 ch5 = Path("queries/medium5.sql").read_text()
+ch6 = Path("queries/medium6.sql").read_text()
 
 conn = sqlite3.connect(DB_PATH)
 conn.row_factory = sqlite3.Row
@@ -72,3 +73,13 @@ def challege5():
     print("CHALLEGE 5:")
     for row in rows:
         print("{} | {} {}".format(row["id"], row["name"], row["Count"]))
+
+
+def challege6():
+    cursor = conn.cursor()
+    cursor.execute(ch6)
+
+    rows = cursor.fetchall()
+    print("CHALLEGE 6:")
+    for row in rows:
+        print("{} | {} ".format(row["id"], row["id"]))
