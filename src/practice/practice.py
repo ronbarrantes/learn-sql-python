@@ -82,4 +82,4 @@ def challege6():
     rows = cursor.fetchall()
     print("CHALLEGE 6:")
     for row in rows:
-        print("{} | {} ".format(row["id"], row["id"]))
+        print("{} | {} ".format(row["order_id"], row["item_quantity"]))
