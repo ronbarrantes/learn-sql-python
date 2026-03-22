@@ -10,4 +10,6 @@ import src.practice.practice as practice
 # print("\n-------\n")
 # practice.challege5()
 # print("\n-------\n")
-practice.challege6()
+# practice.challege6()
+# print("\n-------\n")
+practice.challege7()
